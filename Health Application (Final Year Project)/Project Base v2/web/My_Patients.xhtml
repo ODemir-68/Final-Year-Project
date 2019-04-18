@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <link rel="stylesheet" type="text/css" href="CSS/PatientData.css"></link>
+        <div id="header" >
+            <h:outputText value="My Patients" />
+            <h:dataTable id="Account" value="">
+                <h:column>
+                    <h>My Account</h>
+                </h:column>
+            </h:dataTable>
+        </div>
+    </h:head>
+    <h:body>
+        <div id="main_body">
+            <div id="container">
+                <h:dataTable id="Data" value="">
+                    <h:column>
+                        <a href="DashBoard.xhtml">Dashboard</a>
+                    </h:column>
+                </h:dataTable>  
+                <h:dataTable id="Data" value="" >
+                    <h:column>
+                        <h>Reports</h>
+                    </h:column>
+                </h:dataTable> 
+                <h:dataTable id="Data" value="" >
+                    <h:column>
+                        <h>Hospitals</h>
+                    </h:column>
+                </h:dataTable>                    
+                <h:dataTable id="Data" value="" >
+                    <h:column>
+                        <h>GP Services</h>
+                    </h:column>
+                </h:dataTable>  
+                <h:dataTable id="Data" value="" >
+                    <h:column>
+                    <a href="My_Patients.xhtml">My Patients</a>
+                    </h:column>
+                </h:dataTable>                            
+                <h:dataTable id="Data" value="">
+                    <h:column>
+                        <h>Data</h>
+                    </h:column>
+                </h:dataTable>
+                <h:dataTable id="Data" value="" >
+                    <h:column>
+                        <h>Settings</h>
+                    </h:column>
+                </h:dataTable>
+            </div> 
+
+
+       
+            <div id="user_data">
+                <div id="title_body">
+                    <p>Patient 1</p>
+                </div>              
+               <h:dataTable id="data_body" value="#{patientDataBean.patient01}" var="patientdata">
+                    <h:column>
+                    <a href="PatientData.xhtml">#{patientdata.patientname}</a>
+                    </h:column>
+                </h:dataTable> 
+            </div>
+            <div id="user_data" style=" background-color: lightcoral;">
+                <div id="title_body">
+                    <p>Patient 2</p>
+                </div>              
+               <h:dataTable id="data_body" value="#{patientDataBean.patient02}" var="patientdata">
+                    <h:column>
+                    <a href="PatientData_2.xhtml">#{patientdata.patientname}</a>
+                    </h:column>
+                </h:dataTable> 
+            </div>
+            <div id="user_data">
+                <div id="title_body">
+                    <p>Patient 3</p>
+                </div>              
+               <h:dataTable id="data_body" value="#{patientDataBean.patient03}" var="patientdata">
+                    <h:column>
+                    <a href="PatientData_3.xhtml">#{patientdata.patientname}</a>
+                    </h:column>
+                </h:dataTable> 
+            </div>
+            <div id="user_data" style=" background-color: red;">
+                <div id="title_body">
+                    <p>Patient 4</p>
+                </div>              
+               <h:dataTable id="data_body" value="#{patientDataBean.patient04}" var="patientdata">
+                    <h:column>
+                    <a href="PatientData_4.xhtml">#{patientdata.patientname}</a>
+                    </h:column>
+                </h:dataTable> 
+            </div>
+            <div id="user_data" style=" background-color: lightcoral;">
+                <div id="title_body">
+                    <p>Patient 5</p>
+                </div>              
+               <h:dataTable id="data_body" value="#{patientDataBean.patient05}" var="patientdata">
+                    <h:column>
+                    <a href="PatientData_5.xhtml">#{patientdata.patientname}</a>
+                    </h:column>
+                </h:dataTable>
+            </div>
+        </div>
+    </h:body>
+</html>
+

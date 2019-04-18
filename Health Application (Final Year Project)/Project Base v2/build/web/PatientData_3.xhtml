@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <link rel="stylesheet" type="text/css" href="CSS/PatientData.css"></link>
+        <div id="header" >
+            <h:outputText value="Patient Data" />
+            <h:dataTable id="Account" value="">
+                <h:column>
+                    <h>My Account</h>
+                </h:column>
+            </h:dataTable>
+        </div>
+    </h:head>
+    <h:body>
+        <div id="main_body">
+            <div id="container">
+                <h:dataTable id="Data" value="">
+                    <h:column>
+                        <a href="DashBoard.xhtml">Dashboard</a>
+                    </h:column>
+                </h:dataTable>  
+                
+                <h:dataTable id="Data" value="" >
+                    <h:column>
+                        <h>Reports</h>
+                    </h:column>
+                </h:dataTable> 
+ 
+                <h:dataTable id="Data" value="" >
+                    <h:column>
+                        <h>Hospitals</h>
+                    </h:column>
+                </h:dataTable>                    
+                <h:dataTable id="Data" value="" >
+                    <h:column>
+                        <h>GP Services</h>
+                    </h:column>
+                </h:dataTable>  
+                <h:dataTable id="Data" value="" >
+                    <h:column>
+                    <a href="My_Patients.xhtml">My Patients</a>
+                    </h:column>
+                </h:dataTable>                            
+                <h:dataTable id="Data" value="">
+                    <h:column>
+                        <h>Data</h>
+                    </h:column>
+                </h:dataTable>
+                <h:dataTable id="Data" value="" >
+                    <h:column>
+                        <h>Settings</h>
+                    </h:column>
+                </h:dataTable>
+            </div> 
+
+        <div id="user_img">
+            <img src="HeartRate2.png" alt="Patient Heart Rate" style="width:1130px;height:455px;"></img>
+            </div>
+            <div id="user_data">
+                <div id="title_body">
+                    <p>Patient Name</p>
+                </div>              
+                <h:dataTable id="data_body" value="#{patientDataBean.patient03}" var="patientdata">
+                    <h:column>
+                    #{patientdata.patientname} 
+                    </h:column>
+                </h:dataTable> 
+            </div>
+            <div id="user_data">
+                <div id="title_body">
+                    <p>Body Temperature</p>
+                </div>              
+                <h:dataTable id="data_body" value="#{patientDataBean.patient03}" var="patientdata">
+                    <h:column>
+                    #{patientdata.temperature} 
+                    </h:column>
+                </h:dataTable> 
+            </div>
+            <div id="user_data">
+                <div id="title_body">
+                    <p>Blood Type</p>
+                </div>              
+                <h:dataTable id="data_body" value="#{patientDataBean.patient03}" var="patientdata">
+                    <h:column>
+                    #{patientdata.bloodtype} 
+                    </h:column>
+                </h:dataTable> 
+            </div>            
+            <div id="user_data">
+                <div id="title_body">
+                    <p>Date of Birth</p>
+                </div>              
+                <h:dataTable id="data_body" value="#{patientDataBean.patient03}" var="patientdata">
+                    <h:column>
+                        <h:outputText style='position: relative; left: -40px;' value="#{patientdata.dob}" >
+                            <f:convertDateTime type="date" pattern="dd-MM-yyyy"/>
+                        </h:outputText>
+                    </h:column>
+                </h:dataTable> 
+            </div>
+            <div id="user_data">
+                <div id="title_body">
+                    <p>Pulse</p>
+                </div>              
+                <h:dataTable id="data_body" value="#{patientDataBean.patient03}" var="patientdata">
+                    <h:column>
+                    #{patientdata.pulse} 
+                    </h:column>
+                </h:dataTable> 
+            </div>
+        </div>
+    </h:body>
+</html>
+
